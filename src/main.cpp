@@ -14,9 +14,9 @@ void setup()
 
   char *bleName = new char[32];
   uint64_t chipid = ESP.getEfuseMac();
-  sprintf(bleName, "ESP32-%04X", (uint32_t)(chipid >> 32));
+  sprintf(bleName, "ESP32-PTT-%04X", (uint32_t)(chipid >> 32));
   bleKeyboard.deviceName = bleName;
-  bleKeyboard.deviceManufacturer = "DYI Products";
+  bleKeyboard.deviceManufacturer = "Phu's DYI Products";
   bleKeyboard.begin();
 }
 void loop()
